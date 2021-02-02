@@ -9,17 +9,20 @@ const jokes = {
     'Lettuce in, its cold out here!', 'Police stop telling these awful knock knock jokes!', 'Cactus makes perfect!', 'I had no idea you could yodel', 'Bless you!', 'No silly! A cow says Mooooo',
     'Dishes the police! Come out with your hands up!']
 }
+// Function for randomizing
+function getRandom (number){
+    return Math.floor(Math.random() * number)
+};
+
 // Getting random day
-let dayToday = Math.floor(Math.random() * 7);
+let dayToday = getRandom(7);
 
 
 // Getting random city
-let randomCity = Math.floor(Math.random() * 28);
-
-
+let randomCity = getRandom(28);
 
 // Getting random joke
-let randomJoke = Math.floor(Math.random() * 12);
+let randomJoke = getRandom(12);
 
 console.log(`Today is ${jokes.day[dayToday]}. You are currently is ${jokes.city[randomCity]}. You suddenly hear a knock at the door`);
 console.log(`Knock, knock. Whos there? ${jokes.who[randomJoke]}. ${jokes.who[randomJoke]} who? ${jokes.full[randomJoke]}`);
